@@ -1,10 +1,6 @@
 package com.thais.design_pattern.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.ManyToOne;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Cliente {
@@ -14,7 +10,7 @@ public class Cliente {
     private Long id;
     private String nome;
     @ManyToOne
-    private Endereco endereço;
+    private Endereco endereco;
 
     public Long getId() {
         return id;
@@ -32,11 +28,11 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public Endereco getEndereço() {
-        return endereço;
+    public Endereco getEndereco() {
+        return endereco;
     }
 
-    public void setEndereço(Endereco endereço) {
-        this.endereço = endereço;
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 }
